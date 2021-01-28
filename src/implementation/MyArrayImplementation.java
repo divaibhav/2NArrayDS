@@ -2,6 +2,8 @@ package implementation;
 
 import myinterface.MyArray;
 
+import java.util.Arrays;
+
 public class MyArrayImplementation
         implements MyArray {
     private int[] arr;
@@ -55,5 +57,9 @@ public class MyArrayImplementation
             }
         }
         return response;
+    }
+    @Override
+    public void sort(){
+        Arrays.sort(arr,0,index);
     }
 }
