@@ -26,4 +26,34 @@ public class MyArrayImplementation
         }
         System.out.println();
     }
+    @Override
+    public boolean insert(int element){
+        boolean response = false;
+        if(index != arr.length){
+            arr[index] = element;
+            index++;
+            response = true;
+        }
+        return response;
+    }
+    @Override
+    public boolean delete(){
+        boolean response = false;
+        if(index != 0){
+            index--;
+            response = true;
+        }
+        return response;
+    }
+    @Override
+    public boolean search(int element){
+        boolean response = false;
+        for (int i = 0; i < index; i++) {
+            if(arr[i] == element){
+                response = true;
+                break;
+            }
+        }
+        return response;
+    }
 }
